@@ -16,7 +16,7 @@ function App() {
 </Route>
 <Route path="/addblogs" element={<Addblog/>} > 
 </Route> 
-<Route path="/oneblog" element={<Oneblog/>} > 
+<Route path="/blogs/:id" element={<Oneblog/>} > 
 </Route>
 </Routes></Router>
     </div>

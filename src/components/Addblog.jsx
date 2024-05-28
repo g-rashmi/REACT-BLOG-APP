@@ -1,11 +1,15 @@
 
 import Navbar from "./Navbar"  
 import { useNavigate } from "react-router-dom";
-import { useState } from 'react';
+import { useState } from 'react';  
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { getAuth } from "firebase/auth";
 function Addblog() { 
+  
+
   const navigate=useNavigate();
 const [title,setTitle]=useState(""); 
 const [short,setShort]=useState(""); 
@@ -29,12 +33,25 @@ const handleSubmit = async (event) => {
         authorimg:authimg
       });
       console.log('Data saved successfully!');
-      alert('Blog submitted successfully!');
+      
+        
+      
+  
       setTitle('');
       setShort('');
       setDetail('');
       setIurl(''); 
-      navigate("/blogs");
+      toast.success('blog submitted successfully!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+     setTimeout(()=>{ navigate("/blogs");},2001);
     } catch (e) {
       console.error('Error adding document: ', e);
     }
@@ -43,7 +60,19 @@ const handleSubmit = async (event) => {
   }
 };
   return (
-    <div>
+    <div> 
+    <ToastContainer
+position="top-right"
+autoClose={2000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
     <Navbar/>
     <div className="container " style={{ alignItems:"center" , display:"flex" , height:"79vh",justifyContent:"center",marginTop:"1%"}}>
      <form>
@@ -66,7 +95,9 @@ const handleSubmit = async (event) => {
 <input type="url" className="form-control" required id="exampleInputPassword1" onChange={(e)=>{setIurl(e.target.value)}}/>
 </div> 
 
-   <div className="my-3 text-center">   <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button></div>
+   <div className="my-3 text-center">   
+
+     <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit</button></div>
 
   
   </form></div>
