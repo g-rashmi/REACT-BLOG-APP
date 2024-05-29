@@ -17,28 +17,22 @@ function Login() {
   }
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-      <button 
-        style={{
-          display: "flex", 
-          alignItems: "center", 
-          width: "50%", 
-          padding: "10px", 
-          border: "none", 
-          borderRadius: "5px", 
-          boxShadow: "0 2px 4px rgba(0,0,0,0.1)", 
-          cursor: "pointer",
-          maxWidth: "300px", // Limit button width for small screens
-        }} 
-        onClick={handleGoogle}
-      >
-        <div style={{ marginRight: "10px" }}>
-          <img src="https://freelogopng.com/images/all_img/1657955079google-icon-png.png" alt="" style={{ width: "30px" }} />
-        </div>
-        <div>
-          <h2 style={{ margin: 0 }}>Login with Google</h2>
-        </div>
-      </button>
+    <div className="text-center" style={{position:"relative",top:"30vh" ,left:"30vw"}}>
+    <button
+    className="d-flex align-items-center my-5 text-center" style={{backgroundColor:"white",width:"29%" ,justifyConten:"center", gap:"5%",alignItem:"center"}} 
+    onClick={handleGoogle}>
+    <div style={{width:"14%"}}>
+      <img
+        src="https://freelogopng.com/images/all_img/1657955079google-icon-png.png"
+        alt=""
+        style={{ width: "100%" }}
+      />
+    </div>
+    <div>
+      {" "}
+      <h2 style={{fontWeight:"bold",color:"linear-gradient(90deg, #0b131b, #010f1b)"}}>Login with Google</h2>
+    </div>
+  </button>
     </div>
   );
 }
