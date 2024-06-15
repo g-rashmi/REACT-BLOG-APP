@@ -14,4 +14,61 @@ overflow-x: hidden;
 .navi .btn:hover{
 
 font-size: larger;
+} 
+/* Blogs.css */
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.author-img {
+  height: 40px;
+  width: 40px;
+}
+
+.author-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-footer {
+  font-size: 0.875rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.btn-primary, .btn-danger {
+  flex-grow: 1;
+  margin: 0 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-footer {
+    font-size: 0.75rem;
+  }
 }
