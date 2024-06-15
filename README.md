@@ -48,7 +48,7 @@ To get the project up and running on your local machine, follow these steps:
 4. Start the application:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 5. Open your browser and navigate to `http://localhost:5173` to view the application.
