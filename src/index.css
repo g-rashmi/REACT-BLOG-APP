@@ -1,5 +1,7 @@
 body{  color:white; 
-  background:linear-gradient(90deg, #0b131b, #010f1b);;}
+  background:linear-gradient(90deg, #0b131b, #010f1b); 
+overflow-x: hidden;
+}
 
 ::selection{
   color:aqua;
